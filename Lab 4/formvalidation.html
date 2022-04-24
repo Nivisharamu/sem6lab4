@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Form Validation</title>
+    </head>
+    <body>
+        <form onclick="myform()">
+            What type of car would u like to buy?<br/>
+            <input type="radio" value="Proton"/>Proton
+            <input type="radio" value="Honda"/>Honda
+            <input type="radio" value="Ferri"/>Ferri
+            <input type="radio" value="Ford"/>Ford
+            <br/><br/>
+            What color do you want in your car?<br/>
+            <select>
+                <option value="Pink">Pink</option>
+                <option value="Blue">Blue</option>
+                <option value="Black">Black</option>
+            </select>
+            Other<input type="text">
+            <br/><br/>
+            Enter other specification for ur preferred car:<br/>
+            <textarea rows="10" cols="30"></textarea>
+            <br/><br/>
+            Tell us how to get in touch with u:<br/>
+            <pre>
+                         Name:     <input type="text" id="n">
+                         Telephone:<input type="text" id="t">
+                         Email:    <input type="text" id="e">
+            </pre>
+            <input type="checkbox">Please contact me as soon as possible.
+            <br/><br/>
+            My mail:<a href="abc@gmail.com">abc@gmail.com</a>
+            <br/><br/>
+            <pre>
+  <button type="button">Submit</button> <button type="button">Clear</button>
+            </pre>
+            <a href="mailto:car@gmail.com">Back to mail page</a>
+        </form>
+        <p id="demo"></p>
+        <script>
+         let text=document.getElementById("n");
+         let pattern=/[a-z]/i;
+         let result=text.match(pattern);
+         let text=document.getElementById("t");
+         let pattern=/[0-9]/i;
+         let result=text.match(pattern);
+         let text=document.getElementById("e");
+         let pattern=/@/i;
+         let result=text.match(pattern);
+        </script>
+    </body>
+</html>
